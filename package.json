@@ -1,0 +1,28 @@
+{
+  "name": "tiny-toast",
+  "version": "1.0.0",
+  "description": "Tiny library for JavaScript only message popups",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/tiny-toast.git"
+  },
+  "keywords": [
+    "message",
+    "popup",
+    "alert",
+    "javascript",
+    "micro",
+    "tiny",
+    "ui"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/tiny-toast/issues"
+  },
+  "homepage": "https://github.com/bahmutov/tiny-toast#readme"
+}
