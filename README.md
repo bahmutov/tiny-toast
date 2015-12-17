@@ -7,6 +7,8 @@
 [![semantic-release][semantic-image] ][semantic-url]
 [![manpm](https://img.shields.io/badge/manpm-%E2%9C%93-3399ff.svg)](https://github.com/bahmutov/manpm)
 
+[demo](http://glebbahmutov.com/tiny-toast/)
+
 ![tiny toast screenshot](tiny-toast.png)
 
 ## Install and use
