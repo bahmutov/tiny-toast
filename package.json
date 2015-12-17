@@ -4,12 +4,17 @@
   "description": "Tiny library for JavaScript only message popups",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint",
+    "lint": "standard *.js",
+    "commit": "commit-wizard"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bahmutov/tiny-toast.git"
   },
+  "files": [
+    "index.js"
+  ],
   "keywords": [
     "message",
     "popup",
@@ -24,5 +29,22 @@
   "bugs": {
     "url": "https://github.com/bahmutov/tiny-toast/issues"
   },
-  "homepage": "https://github.com/bahmutov/tiny-toast#readme"
+  "homepage": "https://github.com/bahmutov/tiny-toast#readme",
+  "devDependencies": {
+    "pre-git": "3.1.1",
+    "standard": "5.4.1",
+    "webpack": "1.12.9"
+  },
+  "config": {
+    "pre-git": {
+      "commit-msg": ["simple"],
+      "pre-commit": [
+        "npm run lint",
+        "npm run test"
+      ],
+      "pre-push": [],
+      "post-commit": [],
+      "post-merge": []
+    }
+  }
 }

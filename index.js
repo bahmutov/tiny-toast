@@ -32,7 +32,7 @@ function closeMessage () {
   }
 }
 
-function maybeDefer(fn, timeoutMs) {
+function maybeDefer (fn, timeoutMs) {
   if (timeoutMs) {
     setTimeout(fn, timeoutMs)
   } else {
