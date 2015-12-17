@@ -9,7 +9,8 @@
     "commit": "commit-wizard",
     "build": "webpack --verbose",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "deploy": "grunty grunt-gh-pages gh-pages deploy.json"
+    "deploy": "grunty grunt-gh-pages gh-pages deploy.json",
+    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";"
   },
   "repository": {
     "type": "git",
@@ -52,7 +53,9 @@
         "npm run lint",
         "npm run test"
       ],
-      "pre-push": [],
+      "pre-push": [
+        "npm run size"
+      ],
       "post-commit": [],
       "post-merge": []
     }
