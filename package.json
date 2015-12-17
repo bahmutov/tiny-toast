@@ -6,14 +6,16 @@
   "scripts": {
     "test": "npm run lint",
     "lint": "standard *.js",
-    "commit": "commit-wizard"
+    "commit": "commit-wizard",
+    "build": "webpack --verbose"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bahmutov/tiny-toast.git"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "dist"
   ],
   "keywords": [
     "message",

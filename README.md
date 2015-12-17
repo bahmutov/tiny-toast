@@ -7,6 +7,23 @@
 [![semantic-release][semantic-image] ][semantic-url]
 [![manpm](https://img.shields.io/badge/manpm-%E2%9C%93-3399ff.svg)](https://github.com/bahmutov/manpm)
 
+![tiny toast screenshot](tiny-toast.png)
+
+## Install and use
+
+`npm install tiny-toast`
+
+Include `dist/tiny-toast.js` script
+
+```html
+<script src="tiny-toast.js"></script>
+<script>
+tinyToast.show('Hello from tiny toast')
+// timeout (ms) is optional
+tinyToast.hide(2000)
+</script>
+```
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015
