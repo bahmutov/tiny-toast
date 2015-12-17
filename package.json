@@ -8,7 +8,8 @@
     "lint": "standard *.js",
     "commit": "commit-wizard",
     "build": "webpack --verbose",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "deploy": "grunty grunt-gh-pages gh-pages deploy.json"
   },
   "repository": {
     "type": "git",
@@ -34,10 +35,13 @@
   },
   "homepage": "https://github.com/bahmutov/tiny-toast#readme",
   "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-gh-pages": "1.0.0",
+    "grunty": "0.2.0",
     "pre-git": "3.1.1",
+    "semantic-release": "^4.3.5",
     "standard": "5.4.1",
-    "webpack": "1.12.9",
-    "semantic-release": "^4.3.5"
+    "webpack": "1.12.9"
   },
   "config": {
     "pre-git": {
