@@ -73,6 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  style.borderColor = '#73E1BC'
 	  style.borderStyle = 'solid'
 	  style.padding = '1em 2em'
+	  style.zIndex = 1000
 	  document.body.appendChild(tinyToast)
 	  return tinyToast
 	}
