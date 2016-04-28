@@ -1,3 +1,4 @@
+/* global describe, it, beforeEach, cy, expect */
 describe('tiny toast', () => {
   it('works', () => {
     expect(true).to.be.true
