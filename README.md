@@ -23,8 +23,14 @@ Include `dist/tiny-toast.js` script
 tinyToast.show('Hello from tiny toast')
 // timeout (ms) is optional
 tinyToast.hide(2000)
+// hide can be fluent
+tinyToast.show('Hi').hide(1000)
 </script>
 ```
+
+You can also use this library via [RawGit CDN](https://rawgit.com/) by grabbing the 
+CDN path to the `https://github.com/bahmutov/tiny-toast/blob/master/dist/tiny-toast.js` or 
+specific tag.
 
 ### Small print
 

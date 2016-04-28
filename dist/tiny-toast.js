@@ -54,6 +54,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports) {
 
+	'use strict'
+
 	var tinyToast
 
 	function createDom () {
@@ -97,13 +99,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	}
 
+	function hide (timeoutMs) {
+	  maybeDefer(closeMessage, timeoutMs)
+	}
+
 	var tinyToastApi = {
 	  show: function show (text) {
 	    createMessage(text)
+	    return tinyToastApi
 	  },
-	  hide: function (timeoutMs) {
-	    maybeDefer(closeMessage, timeoutMs)
-	  }
+	  hide: hide
 	}
 
 	module.exports = tinyToastApi

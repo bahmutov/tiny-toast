@@ -1,3 +1,5 @@
+'use strict'
+
 var tinyToast
 
 function createDom () {
@@ -41,13 +43,16 @@ function maybeDefer (fn, timeoutMs) {
   }
 }
 
+function hide (timeoutMs) {
+  maybeDefer(closeMessage, timeoutMs)
+}
+
 var tinyToastApi = {
   show: function show (text) {
     createMessage(text)
+    return tinyToastApi
   },
-  hide: function (timeoutMs) {
-    maybeDefer(closeMessage, timeoutMs)
-  }
+  hide: hide
 }
 
 module.exports = tinyToastApi
