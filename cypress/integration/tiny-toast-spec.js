@@ -1,4 +1,4 @@
-/* global describe, it, beforeEach, cy, expect */
+/* global describe, it, beforeEach, cy, Cypress, expect */
 describe('tiny toast', () => {
   it('works', () => {
     expect(true).to.be.true
@@ -21,6 +21,16 @@ describe('tiny toast', () => {
       cy
         .window().should('have.property', 'tinyToast')
         .window().then((w) => w.tinyToast)
+        .then((tinyToast) => {
+          expect(tinyToast).to.be.a('object')
+          expect(tinyToast.show).to.be.a('function')
+          expect(tinyToast.hide).to.be.a('function')
+        })
+    })
+
+    it('gets tinyToast using _', () => {
+      cy
+        .window().then(Cypress._.property('tinyToast'))
         .then((tinyToast) => {
           expect(tinyToast).to.be.a('object')
           expect(tinyToast.show).to.be.a('function')
