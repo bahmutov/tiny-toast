@@ -28,9 +28,23 @@ tinyToast.show('Hi').hide(1000)
 </script>
 ```
 
-You can also use this library via [RawGit CDN](https://rawgit.com/) by grabbing the 
-CDN path to the `https://github.com/bahmutov/tiny-toast/blob/master/dist/tiny-toast.js` or 
+You can also use this library via [RawGit CDN](https://rawgit.com/) by grabbing the
+CDN path to the `https://github.com/bahmutov/tiny-toast/blob/master/dist/tiny-toast.js` or
 specific tag.
+
+## Custom style
+
+You can adjust the element's CSS style by providing your own rules. Just
+mark them "important".
+
+```
+<style>
+.tinyToast {
+  background-color: #6f3 !important;
+  border-radius: 3px !important;
+}
+</style>
+```
 
 ### Small print
 
