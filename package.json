@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint",
-    "lint": "standard *.js cypress/integration/*.js",
+    "lint": "standard --verbose --fix *.js cypress/integration/*.js",
     "commit": "commit-wizard",
     "build": "webpack --verbose",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
@@ -37,13 +37,13 @@
   },
   "homepage": "https://github.com/bahmutov/tiny-toast#readme",
   "devDependencies": {
-    "git-issues": "1.2.0",
+    "git-issues": "1.3.1",
     "grunt": "0.4.5",
     "grunt-gh-pages": "1.0.0",
-    "grunty": "0.2.0",
-    "pre-git": "3.1.1",
+    "grunty": "0.3.0",
+    "pre-git": "3.11.1",
     "semantic-release": "^4.3.5",
-    "standard": "5.4.1",
+    "standard": "8.5.0",
     "webpack": "1.12.9"
   },
   "config": {
