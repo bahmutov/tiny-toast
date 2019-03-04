@@ -1,6 +1,7 @@
 'use strict'
 
 var tinyToast
+var deferTimeoutId
 
 function createCssStyleSheet () {
   // code taken from
@@ -66,8 +67,10 @@ function closeMessage () {
 }
 
 function maybeDefer (fn, timeoutMs) {
+  clearTimeout(deferTimeoutId)
+
   if (timeoutMs) {
-    setTimeout(fn, timeoutMs)
+    deferTimeoutId = setTimeout(fn, timeoutMs)
   } else {
     fn()
   }
