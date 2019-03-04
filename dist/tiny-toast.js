@@ -57,6 +57,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict'
 
 	var tinyToast
+	var deferTimeoutId
 
 	function createCssStyleSheet () {
 	  // code taken from
@@ -122,8 +123,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function maybeDefer (fn, timeoutMs) {
+	  clearTimeout(deferTimeoutId)
+
 	  if (timeoutMs) {
-	    setTimeout(fn, timeoutMs)
+	    deferTimeoutId = setTimeout(fn, timeoutMs)
 	  } else {
 	    fn()
 	  }
